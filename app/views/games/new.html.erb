@@ -1,4 +1,4 @@
-<h1>New game</h1>
+<h1>Word game</h1>
 <div class="container">
   <% @letters.each do |element| %>
   <div class="letter">
@@ -9,7 +9,7 @@
 
 <form action="/score" method="post">
   <label for="">What is the longest word you can find?</label>
-  <input type="text" name="answer" id="answer">
+  <input type="text" name="answer" id="answer" autofocus>
   <input type="submit" value="Play" id="submit">
   <input type="hidden" name = "grid" value= "<%= @letters %>">
   <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
