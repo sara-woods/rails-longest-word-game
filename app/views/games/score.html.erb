@@ -1,0 +1,20 @@
+<div class="container-score">
+
+
+<h1>Score</h1>
+
+<% case @reply%>
+<% when 1 then %> <p>Sorry, but <strong><%= @answer %></strong> can't be built out of <%= @grid_array.join %></p>
+<% when 2 then %> <p>Sorry, but <strong><%= @answer %></strong> does not seem to be a valid English word</p>
+<% when 3 then %> <p>Congratulations!<strong> <%= @answer %></strong> is a valid English word!</p> <h2>Total score so far: <%= @points %></h2>
+<% when 4 then %> <p>You did not enter a word</p>
+<% end %>
+
+
+
+
+<h2></h2>
+<%= link_to new_path do %>
+<p>Play again</p>
+<% end %>
+</div>
